@@ -14,22 +14,22 @@ describe Bob do
     expect(bob.hey remark).to eq 'Whoa, chill out!'
   end
 
-  skip 'can shout gibberish' do
+  it 'can shout gibberish' do
     remark = ('A'..'Z').to_a.shuffle[0, 10].join
     expect(bob.hey remark).to eq 'Whoa, chill out!'
   end
 
-  skip 'can ask a question' do
+  it 'can ask a question' do
     remark = 'Does this cryogenic chamber make me look fat?'
     expect(bob.hey remark).to eq 'Sure.'
   end
 
-  skip 'can ask a numeric question' do
+  it 'can ask a numeric question' do
     remark = 'You are, what, like 15?'
     expect(bob.hey remark).to eq 'Sure.'
   end
 
-  skip 'can ask gibberish' do
+  it 'can ask gibberish' do
     remark = ('a'..'z').to_a.shuffle[0, 10].join << '?'
     expect(bob.hey remark).to eq 'Sure.'
   end

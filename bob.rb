@@ -12,6 +12,8 @@ class Bob
 
     if @remark.upcase == @remark
       'Whoa, chill out!'
+    elsif @remark.include? '?'
+      'Sure.'
     else
       'Whatever.'
     end
