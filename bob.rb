@@ -10,10 +10,12 @@ class Bob
   def hey(remark)
     @remark = remark
 
-    if @remark.upcase == @remark
-      'Whoa, chill out!'
-    elsif @remark.include? '?'
+    if @remark.empty?
+      'Fine. Be that way!'
+    elsif @remark.end_with? '?'
       'Sure.'
+    elsif @remark.upcase == @remark && @remark.to_i == 0
+      'Whoa, chill out!'
     else
       'Whatever.'
     end
@@ -21,6 +23,8 @@ class Bob
 end
 
 
+# a String starting with a non-numeric character will
+# return 0 when to_i is called on it
 
 #
 # b = Bob.new
